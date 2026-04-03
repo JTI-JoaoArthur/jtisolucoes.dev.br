@@ -118,31 +118,33 @@ nav {
 }
 
 /* Responsivo - Menu Mobile e Tablet */
-@media (max-width: 992px) {
+@media (max-width: 576px) {
     .nav-container {
         padding: 0 1.5rem;
         height: 48px;
+        justify-content: space-between;
     }
 
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         right: 0;
-        left: auto;
-        width: auto;
-        min-width: 170px;
+        width: 260px;
+        height: 100vh;
         flex-direction: column;
-        background: var(--darker-bg);
-        border-top: 1px solid var(--border-color);
-        border-left: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
+        background: rgba(10, 10, 12, 0.92);
+        backdrop-filter: saturate(180%) blur(24px);
+        -webkit-backdrop-filter: saturate(180%) blur(24px);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
         z-index: 9999;
         gap: 0;
+        padding: 80px 0 0 0;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .nav-links.active {
-        display: flex;
+        transform: translateX(0);
     }
 
     .nav-links li {
@@ -151,11 +153,18 @@ nav {
 
     .nav-links a {
         display: block;
-        padding: 0.9rem 1.2rem;
+        padding: 1rem 2rem;
         text-align: left;
-        border-bottom: 1px solid #1a1a1a;
-        font-size: 0.95rem; 
-        color: var(--text-light);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+        transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .nav-links li:last-child a {
@@ -164,6 +173,20 @@ nav {
 
     .nav-toggle {
         display: flex;
+        z-index: 10000;
+    }
+
+    /* Animação do hamburger -> X */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 }
 
@@ -444,7 +467,7 @@ nav {
 @media (max-width: 992px) {
     .tech-logos {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 25px 2px;
     }
     .tech-item {
@@ -563,6 +586,25 @@ nav {
 
 .card-link:hover .card-action {
     opacity: 1;
+}
+
+/* Card Destaque (Serviço Principal) */
+.cards-featured {
+    grid-template-columns: 1.3fr 1fr 1fr;
+}
+
+.card-destaque {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-destaque h3 {
+    font-size: 1.4rem;
+}
+
+@media (max-width: 992px) {
+    .cards-featured {
+        grid-template-columns: 1fr;
+    }
 }
 
 .solucoes-interna {
