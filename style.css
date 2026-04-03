@@ -8,6 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.hidden {
+    display: none;
+}
+
 :root {
     --dark-bg: #111111;
     --darker-bg: #000000;
@@ -270,6 +274,10 @@ nav {
     transform: scale(0.98);
 }
 
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
 .btn-secondary {
     display: inline-block;
     background-color: transparent;
@@ -286,9 +294,13 @@ nav {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     border-color: #ffffff;
+}
+
+.btn-secondary:active {
+    transform: scale(0.95);
 }
 
 .btn-secondary .arrow {
@@ -467,7 +479,7 @@ nav {
 @media (max-width: 992px) {
     .tech-logos {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 25px 2px;
     }
     .tech-item {
@@ -588,24 +600,7 @@ nav {
     opacity: 1;
 }
 
-/* Card Destaque (Serviço Principal) */
-.cards-featured {
-    grid-template-columns: 1.3fr 1fr 1fr;
-}
 
-.card-destaque {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.card-destaque h3 {
-    font-size: 1.4rem;
-}
-
-@media (max-width: 992px) {
-    .cards-featured {
-        grid-template-columns: 1fr;
-    }
-}
 
 .solucoes-interna {
     padding-top: 2rem;
@@ -627,57 +622,6 @@ nav {
     .card {
         padding: 30px 20px;
     }
-}
-
-/* --- Seção de Clientes --- */
-.clientes-secao {
-    padding: 48px 20px;
-    background-color: var(--dark-bg);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    text-align: center;
-}
-
-.clientes-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.clientes-titulo {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 32px;
-    font-weight: 600;
-}
-
-.clientes-logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
-    flex-wrap: wrap;
-    min-height: 48px;
-}
-
-.clientes-logos img {
-    height: 28px;
-    width: auto;
-    opacity: 0.4;
-    filter: grayscale(100%) brightness(2);
-    transition: all 0.3s ease;
-}
-
-.clientes-logos img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-.clientes-em-breve {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.2);
-    font-style: italic;
-    letter-spacing: 0.5px;
 }
 
 /* --- Seção Sobre Nós --- */
@@ -1219,6 +1163,154 @@ a[href^="tel"] {
 .cta-button:hover {
     background-color: #ffffff;
     transform: scale(0.98);
+}
+
+.cta-button:active {
+    transform: scale(0.95);
+}
+
+/* --- Páginas Legais --- */
+.legal-secao {
+    padding: 120px 2rem 5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #a0aab5;
+    line-height: 1.8;
+}
+
+.legal-secao h1 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.legal-secao h3 {
+    color: #ffffff;
+    margin: 2rem 0 1rem;
+}
+
+.legal-secao p {
+    margin-bottom: 1.5rem;
+}
+
+.legal-footer {
+    margin-top: auto;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    background: var(--darker-bg);
+}
+
+.legal-footer p {
+    font-size: 0.85rem;
+    color: #777777;
+}
+
+/* --- Responsivo Global (576px - Mobile) --- */
+@media (max-width: 576px) {
+    .solucoes {
+        padding: 48px 16px;
+    }
+    .solucoes h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .cards-container {
+        max-width: 100%;
+    }
+    .card {
+        padding: 24px 16px;
+    }
+    .card p {
+        font-size: 15px;
+    }
+    .sobre {
+        padding: 3rem 1.2rem;
+    }
+    .sobre-texto h2 {
+        font-size: 1.8rem;
+    }
+    .sobre-texto p {
+        font-size: 1rem;
+    }
+    .sobre-imagem {
+        min-height: 200px;
+    }
+    .faq-secao {
+        padding: 3rem 1.2rem;
+    }
+    .faq-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    .faq-item summary {
+        font-size: 0.95rem;
+        padding: 1.1rem 0;
+    }
+    .faq-item p {
+        font-size: 0.88rem;
+    }
+    .contato-secao {
+        padding: 3rem 1.2rem;
+    }
+    .contato-container h2 {
+        font-size: 1.8rem;
+    }
+    .contato-container p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .form-jti input,
+    .form-jti select,
+    .form-jti textarea {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    footer {
+        padding: 2.5rem 1.2rem 1.2rem;
+    }
+    .footer-brand .footer-logo {
+        font-size: 1.2rem;
+    }
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+    }
+    .whatsapp-tooltip {
+        display: none;
+    }
+    .legal-secao {
+        padding: 80px 1.2rem 3rem;
+    }
+    .legal-secao h1 {
+        font-size: 1.8rem;
+    }
+    .tech-title {
+        margin-bottom: 30px;
+    }
+    .tech-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px 8px;
+    }
+    .tech-item {
+        flex: unset;
+    }
+    .tech-icon {
+        font-size: 1.4rem;
+    }
+    .tech-name {
+        font-size: 0.55rem;
+    }
+    .solucoes-interna h2 {
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* --- Scroll Reveal --- */
