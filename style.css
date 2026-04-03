@@ -564,6 +564,15 @@ nav {
     opacity: 1;
 }
 
+.solucoes-interna {
+    padding-top: 2rem;
+    border-top: none;
+}
+
+.solucoes-interna h2 {
+    margin-bottom: 2.5rem;
+}
+
 @media (max-width: 992px) {
     .cards-container {
         grid-template-columns: 1fr;
@@ -786,13 +795,21 @@ nav {
 .form-jti textarea {
     width: 100%;
     padding: 1.2rem;
-    background-color: var(--darker-bg); 
+    background-color: var(--darker-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px; 
+    border-radius: 8px;
     color: var(--text-light);
     font-family: inherit;
     font-size: 1rem;
     transition: all 0.3s ease;
+}
+
+.form-jti input,
+.form-jti textarea {
+    cursor: text;
+}
+
+.form-jti select {
     cursor: pointer;
 }
 
@@ -811,10 +828,13 @@ nav {
 }
 
 .form-jti button {
-    width: 100%; 
+    width: 100%;
     margin-top: 1rem;
     cursor: pointer;
     text-align: center;
+    border: none;
+    font-family: inherit;
+    font-size: 17px;
 }
 
 /* --- Rodapé (Footer) Premium --- */
@@ -966,13 +986,21 @@ a[href^="tel"] {
     }
 }
 
+/* --- Brasão do Hero (Páginas Internas) --- */
+.hero-brasao {
+    width: 56px;
+    height: auto;
+    margin: 0 auto 16px auto;
+    display: block;
+    opacity: 0.85;
+}
+
 /* --- Hero Genérico (Páginas Internas) --- */
 .hero {
     display: flex;
     justify-content: center;
     text-align: center;
-    min-height: 40vh;
-    padding: 80px 20px 40px 20px;
+    padding: 72px 20px 32px 20px;
     background: radial-gradient(circle at top, #1a1a1a 0%, var(--darker-bg) 70%);
 }
 
@@ -985,11 +1013,11 @@ a[href^="tel"] {
 
 .hero-content h1 {
     font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 600;
     letter-spacing: -0.015em;
     line-height: 1.05;
-    margin: 0 0 16px 0;
+    margin: 0 0 14px 0;
     background: linear-gradient(135deg, #ffffff 0%, #9ba4b5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -998,22 +1026,26 @@ a[href^="tel"] {
 }
 
 .hero-content p {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: #a0aab5;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 70px;
+        padding-top: 64px;
+    }
+    .hero-brasao {
+        width: 44px;
+        margin-bottom: 12px;
     }
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .hero-content p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }
 

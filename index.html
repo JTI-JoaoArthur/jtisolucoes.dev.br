@@ -216,15 +216,15 @@
                 <input type="hidden" name="subject" value="Novo Contato via Site JTI!">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 
-                <input type="text" name="nome" placeholder="Seu Nome ou Empresa" required>
-                
-                <input type="email" name="email" id="email" placeholder="E-mail de contato" required>
+                <input type="text" name="nome" placeholder="Seu Nome ou Empresa" required aria-label="Nome ou empresa">
+
+                <input type="email" name="email" id="email" placeholder="E-mail de contato" required aria-label="E-mail de contato">
                 <span class="error-msg" id="email-error">Formato incompleto. Digite um e-mail válido (ex: nome@empresa.com)</span>
                 
-                <input type="tel" name="telefone" id="telefone" placeholder="Telefone / WhatsApp" required maxlength="15">
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone / WhatsApp" required maxlength="15" aria-label="Telefone ou WhatsApp">
                 <span class="error-msg" id="tel-error">Faltam números. Digite o DDD e o telefone completo.</span>
                 
-                <select name="desafio" id="desafio" required>
+                <select name="desafio" id="desafio" required aria-label="Seu maior desafio">
                     <option value="" disabled selected>Qual é o seu maior desafio hoje?</option>
                     <option value="Preciso de um Site, Sistema ou App">Preciso de um Site, Sistema ou App</option>
                     <option value="Minha infraestrutura/redes está falhando">Minha infraestrutura/redes está falhando</option>
@@ -232,7 +232,7 @@
                     <option value="Outros">Outros</option>
                 </select>
                 
-                <textarea name="mensagem" id="mensagem" rows="4" placeholder="Detalhes adicionais (Opcional)"></textarea>
+                <textarea name="mensagem" id="mensagem" rows="4" placeholder="Detalhes adicionais (Opcional)" aria-label="Mensagem"></textarea>
                 
                 <button type="submit" class="cta-button">Enviar Mensagem</button>
             </form>
