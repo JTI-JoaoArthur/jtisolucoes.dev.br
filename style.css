@@ -629,22 +629,26 @@ nav {
 
 /* --- Seção Sobre Nós --- */
 .sobre {
-    padding: 4rem 2rem 0 2rem;
+    position: relative;
     background-color: var(--darker-bg);
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    min-height: 480px;
 }
 
 .sobre-container {
+    position: relative;
     max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: stretch;
-    gap: 3rem;
+    align-items: center;
+    min-height: 480px;
 }
 
 .sobre-texto {
-    flex: 1;
-    padding: 4rem 0;
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    padding: 4rem 2rem;
 }
 
 .sobre-texto h2 {
@@ -655,38 +659,50 @@ nav {
 }
 
 .sobre-texto p {
-    color: #a0aab5;
+    color: #d0d4da;
     line-height: 1.8;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
 
 .sobre-imagem {
-    flex: 1;
-    min-height: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
     overflow: hidden;
+}
+
+.sobre-imagem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, var(--darker-bg) 0%, transparent 100%);
+    z-index: 1;
 }
 
 .sobre-imagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 42% center;
+    object-position: center center;
 }
 
 @media (max-width: 992px) {
     .sobre {
-        padding: 0;
-        overflow: hidden;
+        min-height: auto;
     }
     .sobre-container {
         flex-direction: column;
-        text-align: center;
-        gap: 0;
-        margin: 0;
-        padding: 0;
+        min-height: auto;
     }
     .sobre-texto {
+        max-width: 100%;
+        text-align: center;
         padding: 3rem 2rem;
         order: 1;
     }
@@ -694,15 +710,17 @@ nav {
         margin-bottom: 0;
     }
     .sobre-imagem {
+        position: relative;
         order: 2;
         width: 100%;
-        min-height: 0;
-        max-height: none;
-        margin: 0;
-        padding: 0;
+        height: auto;
+    }
+    .sobre-imagem::before {
+        display: none;
     }
     .sobre-imagem img {
         display: block;
+        height: auto;
     }
 }
 
