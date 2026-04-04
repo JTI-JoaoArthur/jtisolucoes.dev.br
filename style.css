@@ -694,9 +694,9 @@ nav {
     }
     .sobre-imagem {
         order: 2;
-        width: 100vw;
-        min-height: 280px;
-        max-height: 360px;
+        width: 100%;
+        min-height: 0;
+        max-height: none;
         margin: 0;
         padding: 0;
     }
