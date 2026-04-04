@@ -675,7 +675,7 @@ nav {
 
 @media (max-width: 992px) {
     .sobre {
-        padding: 0 0;
+        padding: 0;
     }
     .sobre-container {
         flex-direction: column;
@@ -689,8 +689,9 @@ nav {
         margin-bottom: 0;
     }
     .sobre-imagem {
-        width: 100%;
-        min-height: 250px;
+        width: 100vw;
+        min-height: 280px;
+        max-height: 360px;
         margin-top: 0;
     }
 }
