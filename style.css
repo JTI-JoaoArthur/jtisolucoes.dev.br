@@ -632,7 +632,7 @@ nav {
     position: relative;
     background-color: var(--darker-bg);
     overflow: hidden;
-    min-height: 480px;
+    min-height: 380px;
 }
 
 .sobre-container {
@@ -641,7 +641,7 @@ nav {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    min-height: 480px;
+    min-height: 380px;
 }
 
 .sobre-texto {
