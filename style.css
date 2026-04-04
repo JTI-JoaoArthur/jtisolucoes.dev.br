@@ -626,7 +626,7 @@ nav {
 
 /* --- Seção Sobre Nós --- */
 .sobre {
-    padding: 0 2rem 0 2rem;
+    padding: 4rem 2rem 0 2rem;
     background-color: var(--darker-bg);
     display: flex;
     justify-content: center;
