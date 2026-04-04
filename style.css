@@ -659,14 +659,12 @@ nav {
 
 .sobre-imagem {
     flex: 1;
-    background: linear-gradient(135deg, #111111 0%, #000000 100%);
-    border: 1px solid var(--border-color);
     border-radius: 12px;
     min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 0 20px rgba(255,255,255,0.02);
+    overflow: hidden;
 }
 
 .sobre-imagem img {
