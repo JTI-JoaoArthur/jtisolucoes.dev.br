@@ -804,7 +804,13 @@ nav {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     opacity: 0;
     pointer-events: none;
-    animation: tooltipShow 0.4s ease 5s forwards, tooltipHide 0.4s ease 10s forwards;
+    transition: opacity 0.3s ease;
+    animation: tooltipShow 0.4s ease 5s forwards, tooltipHide 0.4s ease 12s forwards;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    animation: none;
 }
 
 .whatsapp-tooltip::after {
