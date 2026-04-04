@@ -676,23 +676,32 @@ nav {
 @media (max-width: 992px) {
     .sobre {
         padding: 0;
+        overflow: hidden;
     }
     .sobre-container {
         flex-direction: column;
         text-align: center;
         gap: 0;
+        margin: 0;
+        padding: 0;
     }
     .sobre-texto {
         padding: 3rem 2rem;
+        order: 1;
     }
     .sobre-texto p:last-child {
         margin-bottom: 0;
     }
     .sobre-imagem {
+        order: 2;
         width: 100vw;
         min-height: 280px;
         max-height: 360px;
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .sobre-imagem img {
+        display: block;
     }
 }
 
