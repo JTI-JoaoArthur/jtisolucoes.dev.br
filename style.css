@@ -1244,16 +1244,16 @@ a[href^="tel"] {
         font-size: 15px;
     }
     .sobre {
-        padding: 3rem 1.2rem;
+        padding: 0;
+    }
+    .sobre-texto {
+        padding: 2.5rem 1.2rem;
     }
     .sobre-texto h2 {
         font-size: 1.8rem;
     }
     .sobre-texto p {
         font-size: 1rem;
-    }
-    .sobre-imagem {
-        min-height: 200px;
     }
     .faq-secao {
         padding: 3rem 1.2rem;
