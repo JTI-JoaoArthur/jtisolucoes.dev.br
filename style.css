@@ -640,8 +640,8 @@ nav {
 }
 
 .sobre-texto {
-    flex: 0.8;
-    padding: 6rem 0;
+    flex: 1;
+    padding: 4rem 0;
 }
 
 .sobre-texto h2 {
@@ -659,8 +659,8 @@ nav {
 }
 
 .sobre-imagem {
-    flex: 1.2;
-    min-height: 400px;
+    flex: 1;
+    min-height: 300px;
     overflow: hidden;
 }
 
