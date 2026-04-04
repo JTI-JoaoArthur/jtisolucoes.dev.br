@@ -8,7 +8,7 @@ Site institucional da **JTI Soluções** — empresa de tecnologia focada em des
 
 ## Stack
 
-HTML, CSS e JavaScript puro. Sem framework, sem bundler, sem dependência de build. Hospedado via GitHub Pages com domínio customizado.
+HTML, CSS e JavaScript puro. Sem framework, sem bundler, sem dependência de build. Hospedado via **Cloudflare Pages** com CDN global, proteção DDoS e analytics integrado.
 
 Única dependência externa: [Devicon](https://devicon.dev/) (ícones de tecnologias via CDN).
 
@@ -21,15 +21,16 @@ HTML, CSS e JavaScript puro. Sem framework, sem bundler, sem dependência de bui
 ├── infraestrutura.html        # Página de serviço: suporte e infra
 ├── politica-privacidade.html  # LGPD
 ├── termos-de-uso.html         # Termos legais
+├── 404.html                   # Página de erro personalizada
 ├── style.css                  # CSS único compartilhado
+├── manifest.json              # Web manifest (PWA)
 ├── sitemap.xml                # Sitemap para indexação
-├── CNAME                      # Domínio customizado (GitHub Pages)
 └── assets (imagens)
     ├── hero-ecosystem.png     # Hero da landing (fundo transparente)
     ├── sobre.jpg              # Seção Sobre (wireframes + MacBook)
+    ├── og-image.jpg           # OG image para compartilhamento social
     ├── brasao*.jpg/png        # Variações do logo
-    ├── favicon.png            # Favicon 64x64
-    └── capa-whatsapp.jpg      # OG image para compartilhamento
+    └── favicon.png            # Favicon 64x64
 ```
 
 ## Formulário de contato
@@ -38,7 +39,17 @@ Integrado via [Web3Forms](https://web3forms.com/) — envio client-side sem back
 
 ## Deploy
 
-Push na `main` → GitHub Pages publica automaticamente. O domínio `jtisolucoes.dev.br` é configurado via CNAME e o certificado SSL é gerenciado pelo GitHub.
+`npx wrangler pages deploy . --project-name jtisolucoes-dev-br --branch main`
+
+O domínio `jtisolucoes.dev.br` aponta via CNAME para `jtisolucoes-dev-br.pages.dev`. DNS gerenciado pelo Cloudflare com nameservers `brenna.ns.cloudflare.com` e `tadeo.ns.cloudflare.com`. SSL automático.
+
+## SEO
+
+- Schema.org LocalBusiness (JSON-LD) na index
+- Meta tags Open Graph em todas as páginas
+- Sitemap XML com todas as páginas públicas
+- Canonical URLs nas páginas de serviço
+- `robots: noindex` nas páginas legais
 
 ## Responsivo
 
