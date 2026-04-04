@@ -667,10 +667,10 @@ nav {
 
 .sobre-imagem {
     position: absolute;
-    top: 0;
+    top: 3rem;
     right: 0;
+    bottom: 0;
     width: 60%;
-    height: 100%;
     overflow: hidden;
 }
 
